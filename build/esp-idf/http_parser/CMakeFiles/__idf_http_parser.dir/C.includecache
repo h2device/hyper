@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/naveenvivek/esp/esp-idf/components/http_parser/http_parser.c
+http_parser.h
+/Users/naveenvivek/esp/esp-idf/components/http_parser/http_parser.h
+assert.h
+-
+stddef.h
+-
+ctype.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+
+/Users/naveenvivek/esp/esp-idf/components/http_parser/http_parser.h
+sys/types.h
+-
+BaseTsd.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/assert.h
+sdkconfig.h
+-
+stdlib.h
+-
+stdint.h
+-
+
+config/sdkconfig.h
+

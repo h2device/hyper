@@ -37,8 +37,8 @@
 #include "sdkconfig.h"
 #include "rom/uart.h"
 
-#include "smbus.h"
-#include "i2c-lcd1602.h"
+#include "smbus.c"
+#include "i2c-lcd1602.c"
 
 #define TAG "app"
 
@@ -46,13 +46,6 @@
 #define LCD_NUM_ROWS               2
 #define LCD_NUM_COLUMNS            32
 #define LCD_NUM_VISIBLE_COLUMNS    16
-
-#define portTICK_RATE_MS 50
-
-// LCD2004
-//#define LCD_NUM_ROWS               4
-//#define LCD_NUM_COLUMNS            40
-//#define LCD_NUM_VISIBLE_COLUMNS    20
 
 // Undefine USE_STDIN if no stdin is available (e.g. no USB UART) - a fixed delay will occur instead of a wait for a keypress.
 #define USE_STDIN  1
@@ -97,7 +90,7 @@ static uint8_t _wait_for_user(void)
        vTaskDelay(1);
     }
 #else
-    vTaskDelay(1000 / portTICK_RATE_MS);
+    vTaskDelay(1000 * portTICK_PERIOD_MS);
 #endif
     return c;
 }
@@ -112,7 +105,7 @@ void lcd1602_task(void * pvParameter)
     // Set up the SMBus
     smbus_info_t * smbus_info = smbus_malloc();
     ESP_ERROR_CHECK(smbus_init(smbus_info, i2c_num, address));
-    ESP_ERROR_CHECK(smbus_set_timeout(smbus_info, 1000 / portTICK_RATE_MS));
+    ESP_ERROR_CHECK(smbus_set_timeout(smbus_info, 1000 * portTICK_PERIOD_MS));
 
     // Set up the LCD1602 device with backlight off
     i2c_lcd1602_info_t * lcd_info = i2c_lcd1602_malloc();
@@ -193,7 +186,7 @@ void lcd1602_task(void * pvParameter)
     for (int i = 0; i < 8; ++i)
     {
         i2c_lcd1602_scroll_display_left(lcd_info);
-        vTaskDelay(200 / portTICK_RATE_MS);
+        vTaskDelay(200 * portTICK_PERIOD_MS);
     }
 
     ESP_LOGI(TAG, "scroll display right 8 places quickly");
@@ -228,7 +221,7 @@ void lcd1602_task(void * pvParameter)
     for (int i = 0; i < 5; ++i)
     {
         i2c_lcd1602_write_char(lcd_info, '>');
-        vTaskDelay(200 / portTICK_RATE_MS);
+        vTaskDelay(200 * portTICK_PERIOD_MS);
     }
 
     ESP_LOGI(TAG, "change address counter to decrement (right to left) and display <<<<<");
@@ -237,7 +230,7 @@ void lcd1602_task(void * pvParameter)
     for (int i = 0; i < 5; ++i)
     {
         i2c_lcd1602_write_char(lcd_info, '<');
-        vTaskDelay(200 / portTICK_RATE_MS);
+        vTaskDelay(200 * portTICK_PERIOD_MS);
     }
 
     ESP_LOGI(TAG, "disable auto-scroll and display +++++");
@@ -246,7 +239,7 @@ void lcd1602_task(void * pvParameter)
     for (int i = 0; i < 5; ++i)
     {
         i2c_lcd1602_write_char(lcd_info, '+');
-        vTaskDelay(200 / portTICK_RATE_MS);
+        vTaskDelay(200 * portTICK_PERIOD_MS);
     }
 
     ESP_LOGI(TAG, "set left_to_right and display >>>>>");
@@ -255,7 +248,7 @@ void lcd1602_task(void * pvParameter)
     for (int i = 0; i < 5; ++i)
     {
         i2c_lcd1602_write_char(lcd_info, '>');
-        vTaskDelay(200 / portTICK_RATE_MS);
+        vTaskDelay(200 * portTICK_PERIOD_MS);
     }
 
     ESP_LOGI(TAG, "clear display and disable cursor");
@@ -319,10 +312,12 @@ void lcd1602_task(void * pvParameter)
     uint8_t c = 0;
     uint8_t col = 0;
     uint8_t row = 0;
+    printf("Running!");
     while (1)
     {
+        printf("Running in loop!");
         i2c_lcd1602_write_char(lcd_info, c);
-        vTaskDelay(100 / portTICK_RATE_MS);
+        vTaskDelay(100 * portTICK_PERIOD_MS);
         ESP_LOGD(TAG, "col %d, row %d, char 0x%02x", col, row, c);
         ++c;
         ++col;
