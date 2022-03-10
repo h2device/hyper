@@ -134,6 +134,11 @@ esp-idf/esp_system/ld/sections.ld: esp-idf/esp_timer/libesp_timer.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/freertos/libfreertos.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/newlib/libnewlib.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/cxx/libcxx.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/Adafruit-GFX/libAdafruit-GFX.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/CalEPD/libCalEPD.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/FT6X36-IDF/libFT6X36-IDF.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/I2Cbus/libI2Cbus.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/MPUdriver/libMPUdriver.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/app_trace/libapp_trace.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/asio/libasio.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/unity/libunity.a
@@ -160,9 +165,11 @@ esp-idf/esp_system/ld/sections.ld: esp-idf/esp_websocket_client/libesp_websocket
 esp-idf/esp_system/ld/sections.ld: esp-idf/espcoredump/libespcoredump.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/wear_levelling/libwear_levelling.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/fatfs/libfatfs.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/fonts/libfonts.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/freemodbus/libfreemodbus.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/json/libjson.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/mqtt/libmqtt.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/oleddisplay/liboleddisplay.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/openssl/libopenssl.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/perfmon/libperfmon.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/spiffs/libspiffs.a

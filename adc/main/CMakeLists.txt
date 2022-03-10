@@ -2,7 +2,7 @@
 set(COMPONENT_REQUIRES )
 set(COMPONENT_PRIV_REQUIRES )
 
-set(COMPONENT_SRCS "battery.c")
+set(COMPONENT_SRCS "adc_both.c")
 set(COMPONENT_ADD_INCLUDEDIRS "")
 
 register_component()

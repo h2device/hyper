@@ -29,8 +29,8 @@
 
 static const char* TAG = "example";
 
-static constexpr gpio_num_t SDA = GPIO_NUM_22;
-static constexpr gpio_num_t SCL = GPIO_NUM_23;
+static constexpr gpio_num_t SDA = GPIO_NUM_22; // TODO: used to be  GPIO_NUM_2
+static constexpr gpio_num_t SCL = GPIO_NUM_23; // TODO: used to be  GPIO_NUM_15
 static constexpr uint32_t CLOCK_SPEED = 400000;  // range from 100 KHz ~ 400Hz
 
 extern "C" void app_main() {
@@ -89,6 +89,7 @@ extern "C" void app_main() {
         // Debug
         printf("accel: [%+6.2f %+6.2f %+6.2f ] (G) \t", accelG.x, accelG.y, accelG.z);
         printf("gyro: [%+7.2f %+7.2f %+7.2f ] (º/s)\n", gyroDPS[0], gyroDPS[1], gyroDPS[2]);
+        // printf("weight: %7.2f", force / (accelG.y / 9.81));
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }

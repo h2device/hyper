@@ -30,6 +30,11 @@
 /Users/naveenvivek/esp/hyper/build/esp-idf/freertos/libfreertos.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/newlib/libnewlib.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/cxx/libcxx.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/Adafruit-GFX/libAdafruit-GFX.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/CalEPD/libCalEPD.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/FT6X36-IDF/libFT6X36-IDF.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/I2Cbus/libI2Cbus.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/MPUdriver/libMPUdriver.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/app_trace/libapp_trace.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/asio/libasio.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/unity/libunity.a
@@ -56,9 +61,11 @@
 /Users/naveenvivek/esp/hyper/build/esp-idf/espcoredump/libespcoredump.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/wear_levelling/libwear_levelling.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/fatfs/libfatfs.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/fonts/libfonts.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/freemodbus/libfreemodbus.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/json/libjson.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/mqtt/libmqtt.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/oleddisplay/liboleddisplay.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/openssl/libopenssl.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/perfmon/libperfmon.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/spiffs/libspiffs.a

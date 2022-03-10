@@ -1,0 +1,2 @@
+/Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar qc libFT6X36-IDF.a CMakeFiles/__idf_FT6X36-IDF.dir/FT6X36.cpp.obj CMakeFiles/__idf_FT6X36-IDF.dir/L58Touch.cpp.obj
+/Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib libFT6X36-IDF.a

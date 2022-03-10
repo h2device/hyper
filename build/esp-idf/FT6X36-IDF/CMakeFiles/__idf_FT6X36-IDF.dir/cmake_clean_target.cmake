@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libFT6X36-IDF.a"
+)

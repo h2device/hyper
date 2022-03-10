@@ -1,3 +1,5 @@
+source "/Users/naveenvivek/esp/esp-idf/components/I2Cbus/Kconfig"
+source "/Users/naveenvivek/esp/esp-idf/components/MPUdriver/Kconfig"
 source "/Users/naveenvivek/esp/esp-idf/components/app_trace/Kconfig"
 source "/Users/naveenvivek/esp/esp-idf/components/asio/Kconfig"
 source "/Users/naveenvivek/esp/esp-idf/components/bt/Kconfig"

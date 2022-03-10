@@ -5,8 +5,6 @@
 
 void app_main(void)
 {
-    // nvs_flash_init();
-    // tcpip_adapter_init();
     int level = 0;
     gpio_set_direction(GPIO_NUM_32, GPIO_MODE_OUTPUT);
     while (true) {

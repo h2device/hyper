@@ -1,0 +1,2 @@
+/Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar qc libMPUdriver.a CMakeFiles/__idf_MPUdriver.dir/src/MPU.cpp.obj
+/Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib libMPUdriver.a

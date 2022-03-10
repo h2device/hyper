@@ -1151,6 +1151,71 @@ __idf_cxx/fast:
 .PHONY : __idf_cxx/fast
 
 #=============================================================================
+# Target rules for targets named __idf_Adafruit-GFX
+
+# Build rule for target.
+__idf_Adafruit-GFX: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_Adafruit-GFX
+.PHONY : __idf_Adafruit-GFX
+
+# fast build rule for target.
+__idf_Adafruit-GFX/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/Adafruit-GFX/CMakeFiles/__idf_Adafruit-GFX.dir/build.make esp-idf/Adafruit-GFX/CMakeFiles/__idf_Adafruit-GFX.dir/build
+.PHONY : __idf_Adafruit-GFX/fast
+
+#=============================================================================
+# Target rules for targets named __idf_CalEPD
+
+# Build rule for target.
+__idf_CalEPD: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_CalEPD
+.PHONY : __idf_CalEPD
+
+# fast build rule for target.
+__idf_CalEPD/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/CalEPD/CMakeFiles/__idf_CalEPD.dir/build.make esp-idf/CalEPD/CMakeFiles/__idf_CalEPD.dir/build
+.PHONY : __idf_CalEPD/fast
+
+#=============================================================================
+# Target rules for targets named __idf_FT6X36-IDF
+
+# Build rule for target.
+__idf_FT6X36-IDF: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_FT6X36-IDF
+.PHONY : __idf_FT6X36-IDF
+
+# fast build rule for target.
+__idf_FT6X36-IDF/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/FT6X36-IDF/CMakeFiles/__idf_FT6X36-IDF.dir/build.make esp-idf/FT6X36-IDF/CMakeFiles/__idf_FT6X36-IDF.dir/build
+.PHONY : __idf_FT6X36-IDF/fast
+
+#=============================================================================
+# Target rules for targets named __idf_I2Cbus
+
+# Build rule for target.
+__idf_I2Cbus: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_I2Cbus
+.PHONY : __idf_I2Cbus
+
+# fast build rule for target.
+__idf_I2Cbus/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/I2Cbus/CMakeFiles/__idf_I2Cbus.dir/build.make esp-idf/I2Cbus/CMakeFiles/__idf_I2Cbus.dir/build
+.PHONY : __idf_I2Cbus/fast
+
+#=============================================================================
+# Target rules for targets named __idf_MPUdriver
+
+# Build rule for target.
+__idf_MPUdriver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_MPUdriver
+.PHONY : __idf_MPUdriver
+
+# fast build rule for target.
+__idf_MPUdriver/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/MPUdriver/CMakeFiles/__idf_MPUdriver.dir/build.make esp-idf/MPUdriver/CMakeFiles/__idf_MPUdriver.dir/build
+.PHONY : __idf_MPUdriver/fast
+
+#=============================================================================
 # Target rules for targets named __idf_app_trace
 
 # Build rule for target.
@@ -1489,6 +1554,19 @@ __idf_fatfs/fast:
 .PHONY : __idf_fatfs/fast
 
 #=============================================================================
+# Target rules for targets named __idf_fonts
+
+# Build rule for target.
+__idf_fonts: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_fonts
+.PHONY : __idf_fonts
+
+# fast build rule for target.
+__idf_fonts/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/fonts/CMakeFiles/__idf_fonts.dir/build.make esp-idf/fonts/CMakeFiles/__idf_fonts.dir/build
+.PHONY : __idf_fonts/fast
+
+#=============================================================================
 # Target rules for targets named __idf_freemodbus
 
 # Build rule for target.
@@ -1526,6 +1604,19 @@ __idf_mqtt: cmake_check_build_system
 __idf_mqtt/fast:
 	$(MAKE) $(MAKESILENT) -f esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/build.make esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/build
 .PHONY : __idf_mqtt/fast
+
+#=============================================================================
+# Target rules for targets named __idf_oleddisplay
+
+# Build rule for target.
+__idf_oleddisplay: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_oleddisplay
+.PHONY : __idf_oleddisplay
+
+# fast build rule for target.
+__idf_oleddisplay/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/oleddisplay/CMakeFiles/__idf_oleddisplay.dir/build.make esp-idf/oleddisplay/CMakeFiles/__idf_oleddisplay.dir/build
+.PHONY : __idf_oleddisplay/fast
 
 #=============================================================================
 # Target rules for targets named __idf_openssl
@@ -1670,6 +1761,11 @@ help:
 	@echo "... size-files"
 	@echo "... uf2"
 	@echo "... uf2-app"
+	@echo "... __idf_Adafruit-GFX"
+	@echo "... __idf_CalEPD"
+	@echo "... __idf_FT6X36-IDF"
+	@echo "... __idf_I2Cbus"
+	@echo "... __idf_MPUdriver"
 	@echo "... __idf_app_trace"
 	@echo "... __idf_app_update"
 	@echo "... __idf_asio"
@@ -1705,6 +1801,7 @@ help:
 	@echo "... __idf_esp_wifi"
 	@echo "... __idf_espcoredump"
 	@echo "... __idf_fatfs"
+	@echo "... __idf_fonts"
 	@echo "... __idf_freemodbus"
 	@echo "... __idf_freertos"
 	@echo "... __idf_hal"
@@ -1718,6 +1815,7 @@ help:
 	@echo "... __idf_mqtt"
 	@echo "... __idf_newlib"
 	@echo "... __idf_nvs_flash"
+	@echo "... __idf_oleddisplay"
 	@echo "... __idf_openssl"
 	@echo "... __idf_perfmon"
 	@echo "... __idf_protobuf-c"
