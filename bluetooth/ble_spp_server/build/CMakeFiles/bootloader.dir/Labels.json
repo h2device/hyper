@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/Users/tuhinsarkar/esp/esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
