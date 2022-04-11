@@ -128,8 +128,6 @@ int EpdIf::IfInit(void) {
     SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE0));
     return 0;
     */
-<<<<<<< HEAD
-=======
 
     // SPI.begin();
     gpio_set_direction(MOSI_PIN, GPIO_MODE_OUTPUT);
@@ -161,5 +159,4 @@ int EpdIf::IfInit(void) {
     };
     ret=spi_bus_add_device(VSPI_HOST, &devcfg, &spi);
     ESP_ERROR_CHECK(ret);
->>>>>>> 9791530f5c3ecde924c29976c194acefce6f383d
 }
