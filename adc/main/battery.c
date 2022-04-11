@@ -12,10 +12,10 @@
 #define BATTERY_CONVERT_TO_UNITS(val)    (1320 - ((float) val))/(float)13.2
 
 static esp_adc_cal_characteristics_t *adc_chars;
-static const adc_channel_t channel = ADC2_CHANNEL_4;     //GPIO34 if ADC1, GPIO14 if ADC2
+static const adc_channel_t channel = ADC1_CHANNEL_0;     //GPIO34 if ADC1, GPIO14 if ADC2 // ADC2_CHANNEL_4
 static const adc_bits_width_t width = ADC_WIDTH_BIT_12;
 static const adc_atten_t atten = ADC_ATTEN_11db;
-static const adc_unit_t unit = ADC_UNIT_2;
+static const adc_unit_t unit = ADC_UNIT_1;
 
 static void check_efuse(void) {
     //Check if TP is burned into eFuse
@@ -80,7 +80,10 @@ void app_main(void) {
         //Convert adc_reading to voltage in mV
         uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
         printf("Raw: %d\tVoltage: %dmV\t", adc_reading, voltage);
-        printf("Battery remaining: %f %%\n", BATTERY_CONVERT_TO_UNITS(BATTERY_LIFE( (float) (voltage) / 1000 )));
+        float battery_voltage = voltage * 2.0 / 1000;
+        float percentage_left = 100 - ((battery_voltage - 4.2) * 100 / -1.2);
+        if (percentage_left > 99) percentage_left = 99;
+        printf("Battery %% left: %2.2f %%\n", percentage_left);
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }

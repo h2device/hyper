@@ -38,6 +38,8 @@
 #include "sdkconfig.h"
 #include "esp_log.h"
 
+#define EPD_HOST HSPI_HOST
+
 EpdIf::EpdIf() {
 };
 
@@ -77,6 +79,43 @@ int EpdIf::IfInit(void) {
     gpio_set_direction(RST_PIN, GPIO_MODE_OUTPUT);
     gpio_set_direction(DC_PIN, GPIO_MODE_OUTPUT);
     gpio_set_direction(BUSY_PIN, GPIO_MODE_INPUT);
+    // SPI.begin()
+    esp_err_t err;
+    spi_device_handle_t spi_handle;
+
+    spi_bus_config_t buscfg = {
+        .mosi_io_num = MOSI_PIN,
+        .miso_io_num = MISO_PIN,
+        .sclk_io_num = CLK_PIN,
+    };
+    err = spi_bus_initialize(EPD_HOST, &buscfg, SPI_DMA_CH_AUTO);
+    assert( err == ESP_OK );
+
+    spi_device_interface_config_t devcfg = {
+        .mode = 0,
+        .clock_speed_hz = 500 * 1000,
+        .spics_io_num = CS_PIN,
+        .flags = SPI_TRANS_USE_RXDATA,
+        .queue_size = 1
+    };
+    err = spi_bus_add_device(EPD_HOST, &devcfg, &spi_handle);
+    assert( err == ESP_OK );
+
+    /*
+    uint8_t cmd = 0x03;
+
+    spi_transaction_t t;
+    memset(&t, 0, sizeof(t));
+    t.length = 8;
+    t.tx_buffer = &cmd;
+
+    gpio_set_level(PIN_NUM_SS, 0);
+    err = spi_device_transmit(opcn2_handle, &t);
+    gpio_set_level(PIN_NUM_SS, 1);
+    assert( err == ESP_OK );
+
+    ESP_LOGI(TAG, "response: 0x%02x", t.rx_data[0]);
+    */
 
     // TODO: Convert to ESP-IDF
     /*
@@ -88,63 +127,4 @@ int EpdIf::IfInit(void) {
     SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE0));
     return 0;
     */
-    send_lines(); // NEED TO PASS IN PARAMETESR HERE
-    spi_bus_config_t buscfg={
-        .miso_io_num = PIN_NUM_MISO,
-        .mosi_io_num = PIN_NUM_MOSI,
-        .sclk_io_num = PIN_NUM_CLK,
-        .quadwp_io_num = -1,
-        .quadhd_io_num = -1,
-        .max_transfer_sz = 32,
-    };
-    //Initialize the SPI bus
-    ret = spi_bus_initialize(EEPROM_HOST, &buscfg, SPI_DMA_CH_AUTO);
-    // SPI.begin();
-    gpio_set_direction(MOSI_PIN, GPIO_MODE_OUTPUT);
-    vTaskDelay(100 / portTICK_RATE_MS);
-    gpio_set_direction(CLK_PIN, GPIO_MODE_OUTPUT);
-    vTaskDelay(100 / portTICK_RATE_MS);
-    gpio_set_direction(MISO_PIN, GPIO_MODE_OUTPUT);
-    vTaskDelay(100 / portTICK_RATE_MS);
-    // SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE0));
-    spi_bus_config_t buscfg = {
-		.mosi_io_num = DATA_PIN,
-		.miso_io_num = 5,
-		.sclk_io_num = CLK_PIN,
-		.quadwp_io_num = -1,
-		.quadhd_io_num = -1,
-		.max_transfer_sz = SPI_MAX_DMA_LEN,
-	};
-    // Configuration for the SPI master interface
-	spi_device_interface_config_t devcfg = {
-		.command_bits = 0,
-		.address_bits = 0,
-		.dummy_bits = 0,
-		.duty_cycle_pos = 128,
-		.cs_ena_pretrans = 0,
-		.cs_ena_posttrans = 0,
-		.clock_speed_hz = 26*1000*1000,
-		.mode = 0,
-		.spics_io_num = 17,
-		.queue_size = 1,
-		.flags = 0,
-		.pre_cb = NULL,
-		.post_cb = NULL,
-	};
-
-    spi_bus_initialize(VSPI_HOST, &buscfg, 1);
-	spi_bus_add_device(VSPI_HOST, &devcfg, &spi_handle);
-
-    /*
-    //Send all the commands
-    while (lcd_init_cmds[cmd].databytes!=0xff) {
-        lcd_cmd(spi, lcd_init_cmds[cmd].cmd, false);
-        lcd_data(spi, lcd_init_cmds[cmd].data, lcd_init_cmds[cmd].databytes&0x1F);
-        if (lcd_init_cmds[cmd].databytes&0x80) {
-            vTaskDelay(100 / portTICK_PERIOD_MS);
-        }
-        cmd++;
-    }
-    */
-	
 }
