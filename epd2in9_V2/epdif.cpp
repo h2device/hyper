@@ -1,4 +1,4 @@
-/**
+q/**
  *  @filename   :   epdif.cpp
  *  @brief      :   Implements EPD interface functions
  *                  Users have to implement all the functions in epdif.cpp
@@ -33,6 +33,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/spi_master.h"
+#include "driver/spi_common.h"
 #include "driver/gpio.h"
 
 #include "sdkconfig.h"
@@ -127,4 +128,38 @@ int EpdIf::IfInit(void) {
     SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE0));
     return 0;
     */
+<<<<<<< HEAD
+=======
+
+    // SPI.begin();
+    gpio_set_direction(MOSI_PIN, GPIO_MODE_OUTPUT);
+    vTaskDelay(100 / portTICK_RATE_MS);
+    gpio_set_direction(CLK_PIN, GPIO_MODE_OUTPUT);
+    vTaskDelay(100 / portTICK_RATE_MS);
+    gpio_set_direction(MISO_PIN, GPIO_MODE_OUTPUT);
+    vTaskDelay(100 / portTICK_RATE_MS);
+    
+	// Initialize bus
+    spi_device_handle_t spi;
+    spi_bus_config_t bus_config={
+        .miso_io_num=MISO_PIN,
+        .mosi_io_num=MOSI_PIN,
+        .sclk_io_num=CLK_PIN,
+        .quadwp_io_num=-1,
+        .quadhd_io_num=-1,
+        .max_transfer_sz=4092
+    };
+    spi_dma_chan_t dma_chan = SPI_DMA_CH_AUTO;
+    ret = spi_bus_initialize(VSPI_HOST, bus_config, dma_chan);
+    ESP_ERROR_CHECK(ret);
+    // Adding Eink to bus
+    spi_device_interface_config_t devcfg={
+        .clock_speed_hz=2000000,
+        .mode=0,
+        .spics_io_num=CS_PIN,
+        .queue_size=7
+    };
+    ret=spi_bus_add_device(VSPI_HOST, &devcfg, &spi);
+    ESP_ERROR_CHECK(ret);
+>>>>>>> 9791530f5c3ecde924c29976c194acefce6f383d
 }
