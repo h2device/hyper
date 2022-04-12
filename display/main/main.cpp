@@ -2543,9 +2543,15 @@ extern "C" void app_main() {
   }
   // epd.Init();
   printf("GPIO Pins set\n");
+  /*
   epd.ClearFrameMemory(0xFF);   // bit set = white, bit reset = black
   printf("after clear frame memory\n");
   epd.DisplayFrame();
+  */
+  epd.SetFrameMemory_Base(IMAGE_DATA);
+  epd.DisplayFrame();
+  // epd.SetFrameMemory(paint.GetImage(), 0, 10, paint.GetWidth(), paint.GetHeight());
+  /*
   printf("after dispaly frame\n");
   paint.SetRotate(ROTATE_0);
   paint.SetWidth(128);
@@ -2568,16 +2574,19 @@ extern "C" void app_main() {
     paint.SetHeight(96);
     paint.SetRotate(ROTATE_90);
     paint.Clear(UNCOLORED);
-    char s[] = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    // char s[] = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
-    paint.DrawStringAt(0, 4, s, &std_font, COLORED);
-    
-    epd.SetFrameMemory_Partial(paint.GetImage(), 80, 72, paint.GetWidth(), paint.GetHeight());
-    epd.DisplayFrame_Partial();
+    paint.DrawStringAt(0, 4, "penis", &std_font, COLORED);
+
+    // epd.SetFrameMemory_Partial(paint.GetImage(), 80, 72, paint.GetWidth(), paint.GetHeight());
+    // epd.DisplayFrame_Partial();
+    epd.SetFrameMemory(paint.GetImage(), 80, 72, paint.GetWidth(), paint.GetHeight());
     vTaskDelay(300 / portTICK_PERIOD_MS);
+    epd.DisplayFrame();
     printf("Looping!\n");
-    // x = 0;
+    x = 0;
   }
   printf("Done!\n");
+  */
   return;
 }
