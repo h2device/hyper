@@ -86,10 +86,6 @@ xtensa_perfmon_apis.h
 xtensa_perfmon_masks.h
 /Users/naveenvivek/esp/esp-idf/components/perfmon/xtensa_perfmon_masks.h
 
-/Users/naveenvivek/esp/esp-idf/components/perfmon/xtensa_perfmon_masks.c
-xtensa_perfmon_masks.h
-/Users/naveenvivek/esp/esp-idf/components/perfmon/xtensa_perfmon_masks.h
-
 /Users/naveenvivek/esp/esp-idf/components/soc/esp32/include/soc/reset_reasons.h
 
 /Users/naveenvivek/esp/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h

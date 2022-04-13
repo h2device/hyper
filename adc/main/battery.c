@@ -8,8 +8,6 @@
 
 #define DEFAULT_VREF    1100        //Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES   64          //Multisampling
-#define BATTERY_LIFE(v)   (-811.88*v*v) + (3161.8*v) - (1707.4)
-#define BATTERY_CONVERT_TO_UNITS(val)    (1320 - ((float) val))/(float)13.2
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc_channel_t channel = ADC1_CHANNEL_0;     //GPIO34 if ADC1, GPIO14 if ADC2 // ADC2_CHANNEL_4

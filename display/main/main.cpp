@@ -2521,14 +2521,6 @@ sFONT std_font = {
   24, /* Height */
 };
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
-/**
-  * Due to RAM not enough in Arduino UNO, a frame buffer is not allowed.
-  * In this case, a smaller image buffer is allocated and you have to 
-  * update a partial display several times.
-  * 1 byte = 8 pixels, therefore you have to set 8*N pixels at a time.
-  */
 extern "C" void app_main() {
   printf("Good morning!");
   unsigned char image[1024];
@@ -2537,19 +2529,20 @@ extern "C" void app_main() {
   Epd epd;
   unsigned long time_now_s;
   // vTaskDelay(2000 / portTICK_PERIOD_MS);
+  printf("epd.Init() started.\n");
   if (epd.Init() != 0) {
     printf("e-Paper init failed\n");
     return;
   }
-  // epd.Init();
-  printf("GPIO Pins set\n");
+  printf("epd.Init() completed.\n");
   /*
   epd.ClearFrameMemory(0xFF);   // bit set = white, bit reset = black
-  printf("after clear frame memory\n");
+  printf("epd.ClearFrameMemory completed.");
   epd.DisplayFrame();
-  */
+  printf("epd.DisplayFrame completed.");
   epd.SetFrameMemory_Base(IMAGE_DATA);
   epd.DisplayFrame();
+  */
   // epd.SetFrameMemory(paint.GetImage(), 0, 10, paint.GetWidth(), paint.GetHeight());
   /*
   printf("after dispaly frame\n");

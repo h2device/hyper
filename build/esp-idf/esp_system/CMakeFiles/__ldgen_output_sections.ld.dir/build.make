@@ -135,7 +135,7 @@ esp-idf/esp_system/ld/sections.ld: esp-idf/freertos/libfreertos.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/newlib/libnewlib.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/cxx/libcxx.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/Adafruit-GFX/libAdafruit-GFX.a
-esp-idf/esp_system/ld/sections.ld: esp-idf/CalEPD/libCalEPD.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/Edriver2/libEdriver2.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/FT6X36-IDF/libFT6X36-IDF.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/I2Cbus/libI2Cbus.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/MPUdriver/libMPUdriver.a

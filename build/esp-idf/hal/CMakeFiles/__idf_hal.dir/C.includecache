@@ -434,16 +434,6 @@ hal/wdt_types.h
 esp_attr.h
 /Users/naveenvivek/esp/esp-idf/components/hal/esp32/include/hal/esp_attr.h
 
-/Users/naveenvivek/esp/esp-idf/components/hal/esp32/include/hal/pcnt_ll.h
-stdlib.h
--
-stdbool.h
--
-soc/pcnt_struct.h
-/Users/naveenvivek/esp/esp-idf/components/hal/esp32/include/hal/soc/pcnt_struct.h
-hal/pcnt_types.h
-/Users/naveenvivek/esp/esp-idf/components/hal/esp32/include/hal/hal/pcnt_types.h
-
 /Users/naveenvivek/esp/esp-idf/components/hal/esp32/include/hal/rmt_ll.h
 stdbool.h
 -
@@ -866,12 +856,6 @@ stdint.h
 soc/soc_caps.h
 /Users/naveenvivek/esp/esp-idf/components/hal/include/hal/soc/soc_caps.h
 
-/Users/naveenvivek/esp/esp-idf/components/hal/include/hal/pcnt_hal.h
-soc/pcnt_struct.h
-/Users/naveenvivek/esp/esp-idf/components/hal/include/hal/soc/pcnt_struct.h
-
-/Users/naveenvivek/esp/esp-idf/components/hal/include/hal/pcnt_types.h
-
 /Users/naveenvivek/esp/esp-idf/components/hal/include/hal/rmt_hal.h
 stdint.h
 -
@@ -1137,12 +1121,6 @@ hal/mpu_types.h
 /Users/naveenvivek/esp/esp-idf/components/hal/hal/mpu_types.h
 soc/soc_caps.h
 /Users/naveenvivek/esp/esp-idf/components/hal/soc/soc_caps.h
-
-/Users/naveenvivek/esp/esp-idf/components/hal/pcnt_hal.c
-hal/pcnt_hal.h
-/Users/naveenvivek/esp/esp-idf/components/hal/hal/pcnt_hal.h
-hal/pcnt_ll.h
-/Users/naveenvivek/esp/esp-idf/components/hal/hal/pcnt_ll.h
 
 /Users/naveenvivek/esp/esp-idf/components/hal/platform_port/include/hal/assert.h
 sdkconfig.h
@@ -1497,10 +1475,6 @@ stdint.h
 -
 
 /Users/naveenvivek/esp/esp-idf/components/soc/esp32/include/soc/mcpwm_struct.h
-stdint.h
--
-
-/Users/naveenvivek/esp/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h
 stdint.h
 -
 

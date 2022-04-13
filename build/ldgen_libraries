@@ -31,7 +31,7 @@
 /Users/naveenvivek/esp/hyper/build/esp-idf/newlib/libnewlib.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/cxx/libcxx.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/Adafruit-GFX/libAdafruit-GFX.a
-/Users/naveenvivek/esp/hyper/build/esp-idf/CalEPD/libCalEPD.a
+/Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2/libEdriver2.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/FT6X36-IDF/libFT6X36-IDF.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/I2Cbus/libI2Cbus.a
 /Users/naveenvivek/esp/hyper/build/esp-idf/MPUdriver/libMPUdriver.a

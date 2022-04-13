@@ -135,7 +135,7 @@ hyper.elf: esp-idf/freertos/libfreertos.a
 hyper.elf: esp-idf/newlib/libnewlib.a
 hyper.elf: esp-idf/cxx/libcxx.a
 hyper.elf: esp-idf/Adafruit-GFX/libAdafruit-GFX.a
-hyper.elf: esp-idf/CalEPD/libCalEPD.a
+hyper.elf: esp-idf/Edriver2/libEdriver2.a
 hyper.elf: esp-idf/FT6X36-IDF/libFT6X36-IDF.a
 hyper.elf: esp-idf/I2Cbus/libI2Cbus.a
 hyper.elf: esp-idf/MPUdriver/libMPUdriver.a
@@ -175,7 +175,6 @@ hyper.elf: esp-idf/perfmon/libperfmon.a
 hyper.elf: esp-idf/spiffs/libspiffs.a
 hyper.elf: esp-idf/ulp/libulp.a
 hyper.elf: esp-idf/wifi_provisioning/libwifi_provisioning.a
-hyper.elf: esp-idf/Adafruit-GFX/libAdafruit-GFX.a
 hyper.elf: esp-idf/I2Cbus/libI2Cbus.a
 hyper.elf: esp-idf/app_trace/libapp_trace.a
 hyper.elf: esp-idf/app_trace/libapp_trace.a

@@ -810,19 +810,11 @@ sys/features.h
 
 /Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/lock.h
 
-/Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/poll.h
-
 /Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/random.h
 sys/types.h
 -
 
 /Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/reent.h
-
-/Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/select.h
-sys/types.h
--
-sys/time.h
--
 
 /Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/termios.h
 stdint.h
@@ -841,18 +833,6 @@ sys/types.h
 /Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/sys/unistd.h
 
 /Users/naveenvivek/esp/esp-idf/components/newlib/platform_include/time.h
-
-/Users/naveenvivek/esp/esp-idf/components/newlib/poll.c
-stddef.h
--
-sys/poll.h
--
-sys/select.h
--
-sys/errno.h
--
-sys/param.h
--
 
 /Users/naveenvivek/esp/esp-idf/components/newlib/port/esp_time_impl.c
 stdint.h

@@ -155,61 +155,27 @@ CONFIG_APP_BUILD_USE_FLASH_SECTIONS=y
 # end of Build type
 
 #
-# Display Configuration
+# MPU driver
 #
-
-#
-# Fill only EPD entries for single SPI displays (Good display/Waveshare)
-#
-
-#
-# Mosi and Clock should be set for any epaper
-#
-CONFIG_EINK_SPI_MOSI=23
-CONFIG_EINK_SPI_CLK=18
-CONFIG_EINK_SPI_CS=32
-CONFIG_EINK_DC=27
-CONFIG_EINK_RST=26
-CONFIG_EINK_BUSY=35
-
-#
-# Important: Leave the rest of unconfigured GPIOs to -1 unless multi-SPI channels (wave12I48) or Plasticlogic EPDs
-#
-
-#
-# CS2 and MISO pins apply only to Plasticlogic.com epaper displays
-#
-CONFIG_EINK_SPI_CS2=4
-CONFIG_EINK_SPI_MISO=19
-
-#
-# Config below applies to 4 epaper module wave12I48 w/4 SPI CS & BUSY pins (14 pins)
-#
-
-#
-# | S2 | M2 |
-#
-
-#
-# -----------
-#
-
-#
-# | M1 | S1 |
-#
-CONFIG_EINK_SPI_M1_CS=23
-CONFIG_EINK_SPI_S1_CS=22
-CONFIG_EINK_SPI_M2_CS=16
-CONFIG_EINK_SPI_S2_CS=19
-CONFIG_EINK_SPI_M1_BUSY=32
-CONFIG_EINK_SPI_S1_BUSY=26
-CONFIG_EINK_SPI_M2_BUSY=18
-CONFIG_EINK_SPI_S2_BUSY=4
-CONFIG_EINK_M1S1_DC=25
-CONFIG_EINK_M2S2_DC=17
-CONFIG_EINK_M1S1_RST=33
-CONFIG_EINK_M2S2_RST=5
-# end of Display Configuration
+# CONFIG_MPU6000 is not set
+CONFIG_MPU6050=y
+# CONFIG_MPU6500 is not set
+# CONFIG_MPU6555 is not set
+# CONFIG_MPU9150 is not set
+# CONFIG_MPU9250 is not set
+# CONFIG_MPU9255 is not set
+CONFIG_MPU_CHIP_MODEL="MPU6050"
+CONFIG_MPU_I2C=y
+CONFIG_MPU_COMM_PROTOCOL="I2C"
+CONFIG_MPU_LOG_LEVEL_DEFAULT=y
+# CONFIG_MPU_LOG_LEVEL_NONE is not set
+# CONFIG_MPU_LOG_LEVEL_ERROR is not set
+# CONFIG_MPU_LOG_LEVEL_WARN is not set
+# CONFIG_MPU_LOG_LEVEL_INFO is not set
+CONFIG_MPU_LOG_LEVEL=3
+# CONFIG_MPU_ENABLE_DMP is not set
+CONFIG_MPU_LOG_ERROR_TRACES=y
+# end of MPU driver
 
 #
 # Touch FT6X36 Configuration
@@ -236,24 +202,6 @@ CONFIG_I2CBUS_LOG_ERRORS=y
 #
 # MPU driver
 #
-# CONFIG_MPU6000 is not set
-CONFIG_MPU6050=y
-# CONFIG_MPU6500 is not set
-# CONFIG_MPU6555 is not set
-# CONFIG_MPU9150 is not set
-# CONFIG_MPU9250 is not set
-# CONFIG_MPU9255 is not set
-CONFIG_MPU_CHIP_MODEL="MPU6050"
-CONFIG_MPU_I2C=y
-CONFIG_MPU_COMM_PROTOCOL="I2C"
-CONFIG_MPU_LOG_LEVEL_DEFAULT=y
-# CONFIG_MPU_LOG_LEVEL_NONE is not set
-# CONFIG_MPU_LOG_LEVEL_ERROR is not set
-# CONFIG_MPU_LOG_LEVEL_WARN is not set
-# CONFIG_MPU_LOG_LEVEL_INFO is not set
-CONFIG_MPU_LOG_LEVEL=3
-# CONFIG_MPU_ENABLE_DMP is not set
-CONFIG_MPU_LOG_ERROR_TRACES=y
 # end of MPU driver
 
 #
@@ -381,6 +329,11 @@ CONFIG_COMPILER_STACK_CHECK_MODE_NONE=y
 #
 # Component config
 #
+
+#
+# MPU driver
+#
+# end of MPU driver
 
 #
 # I2Cbus

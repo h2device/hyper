@@ -30,16 +30,6 @@ esp_ipc_isr.h
 sdkconfig.h
 /Users/naveenvivek/esp/esp-idf/components/esp_system/include/sdkconfig.h
 
-/Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers_asm.S
-xtensa/coreasm.h
--
-xtensa/corebits.h
--
-xtensa/config/system.h
--
-xtensa/hal.h
--
-
 /Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_handler.S
 xtensa/coreasm.h
 -
@@ -57,20 +47,6 @@ soc/soc.h
 /Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/soc/soc.h
 soc/dport_reg.h
 /Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/soc/dport_reg.h
-
-/Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_routines.S
-xtensa/coreasm.h
--
-xtensa/corebits.h
--
-xtensa/config/system.h
--
-xtensa/hal.h
--
-
-/Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack_asm.S
-freertos/xtensa_context.h
--
 
 /Users/naveenvivek/esp/esp-idf/components/esp_system/port/arch/xtensa/panic_handler_asm.S
 freertos/xtensa_rtos.h

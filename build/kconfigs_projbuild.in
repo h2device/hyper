@@ -1,4 +1,4 @@
-source "/Users/naveenvivek/esp/esp-idf/components/CalEPD/Kconfig.projbuild"
+source "/Users/naveenvivek/esp/esp-idf/components/Edriver2/Kconfig.projbuild"
 source "/Users/naveenvivek/esp/esp-idf/components/FT6X36-IDF/Kconfig.projbuild"
 source "/Users/naveenvivek/esp/esp-idf/components/I2Cbus/Kconfig.projbuild"
 source "/Users/naveenvivek/esp/esp-idf/components/MPUdriver/Kconfig.projbuild"

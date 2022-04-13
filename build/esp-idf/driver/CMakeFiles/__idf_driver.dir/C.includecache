@@ -866,8 +866,6 @@ soc/clk_ctrl_os.h
 esp_private/periph_ctrl.h
 /Users/naveenvivek/esp/esp-idf/components/driver/esp_private/periph_ctrl.h
 
-/Users/naveenvivek/esp/esp-idf/components/driver/legacy_new_driver_coexist.c
-
 /Users/naveenvivek/esp/esp-idf/components/driver/mcpwm.c
 stdio.h
 -

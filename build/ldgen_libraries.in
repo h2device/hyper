@@ -31,7 +31,7 @@ $<TARGET_FILE:__idf_freertos>
 $<TARGET_FILE:__idf_newlib>
 $<TARGET_FILE:__idf_cxx>
 $<TARGET_FILE:__idf_Adafruit-GFX>
-$<TARGET_FILE:__idf_CalEPD>
+$<TARGET_FILE:__idf_Edriver2>
 $<TARGET_FILE:__idf_FT6X36-IDF>
 $<TARGET_FILE:__idf_I2Cbus>
 $<TARGET_FILE:__idf_MPUdriver>

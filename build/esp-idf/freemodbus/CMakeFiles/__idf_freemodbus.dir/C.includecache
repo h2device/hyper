@@ -556,8 +556,6 @@ mbconfig.h
 mbutils.h
 /Users/naveenvivek/esp/esp-idf/components/freemodbus/modbus/functions/mbutils.h
 
-/Users/naveenvivek/esp/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c
-
 /Users/naveenvivek/esp/esp-idf/components/freemodbus/modbus/functions/mbfuncdisc.c
 stdlib.h
 /Users/naveenvivek/esp/esp-idf/components/freemodbus/modbus/functions/stdlib.h

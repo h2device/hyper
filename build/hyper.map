@@ -7283,7 +7283,7 @@ LOAD esp-idf/freertos/libfreertos.a
 LOAD esp-idf/newlib/libnewlib.a
 LOAD esp-idf/cxx/libcxx.a
 LOAD esp-idf/Adafruit-GFX/libAdafruit-GFX.a
-LOAD esp-idf/CalEPD/libCalEPD.a
+LOAD esp-idf/Edriver2/libEdriver2.a
 LOAD esp-idf/FT6X36-IDF/libFT6X36-IDF.a
 LOAD esp-idf/I2Cbus/libI2Cbus.a
 LOAD esp-idf/MPUdriver/libMPUdriver.a
@@ -7324,7 +7324,6 @@ LOAD esp-idf/spiffs/libspiffs.a
 LOAD esp-idf/ulp/libulp.a
 LOAD esp-idf/wifi_provisioning/libwifi_provisioning.a
                 0x0000000000000000                IDF_TARGET_ESP32 = 0x0
-LOAD esp-idf/Adafruit-GFX/libAdafruit-GFX.a
 LOAD esp-idf/I2Cbus/libI2Cbus.a
 LOAD esp-idf/app_trace/libapp_trace.a
 LOAD /Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/no-rtti/libgcov.a

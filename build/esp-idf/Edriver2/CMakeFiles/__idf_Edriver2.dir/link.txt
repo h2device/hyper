@@ -1,0 +1,2 @@
+/Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ar qc libEdriver2.a CMakeFiles/__idf_Edriver2.dir/src/epdif.cpp.obj CMakeFiles/__idf_Edriver2.dir/src/epd2in9_V2.cpp.obj CMakeFiles/__idf_Edriver2.dir/src/imagedata.cpp.obj CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.obj
+/Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib libEdriver2.a

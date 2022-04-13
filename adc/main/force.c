@@ -28,10 +28,7 @@ static const adc_bits_width_t width = ADC_WIDTH_BIT_13;
 static const adc_atten_t atten = ADC_ATTEN_DB_0;
 static const adc_unit_t unit = ADC_UNIT_1;
 
-
-static void check_efuse(void)
-{
-#if CONFIG_IDF_TARGET_ESP32
+static void check_efuse(void) {
     //Check if TP is burned into eFuse
     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
         printf("eFuse Two Point: Supported\n");
@@ -44,15 +41,6 @@ static void check_efuse(void)
     } else {
         printf("eFuse Vref: NOT supported\n");
     }
-#elif CONFIG_IDF_TARGET_ESP32S2
-    if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
-        printf("eFuse Two Point: Supported\n");
-    } else {
-        printf("Cannot retrieve eFuse Two Point calibration values. Default calibration values will be used.\n");
-    }
-#else
-#error "This example is configured for ESP32/ESP32S2."
-#endif
 }
 
 

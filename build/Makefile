@@ -1164,17 +1164,17 @@ __idf_Adafruit-GFX/fast:
 .PHONY : __idf_Adafruit-GFX/fast
 
 #=============================================================================
-# Target rules for targets named __idf_CalEPD
+# Target rules for targets named __idf_Edriver2
 
 # Build rule for target.
-__idf_CalEPD: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_CalEPD
-.PHONY : __idf_CalEPD
+__idf_Edriver2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_Edriver2
+.PHONY : __idf_Edriver2
 
 # fast build rule for target.
-__idf_CalEPD/fast:
-	$(MAKE) $(MAKESILENT) -f esp-idf/CalEPD/CMakeFiles/__idf_CalEPD.dir/build.make esp-idf/CalEPD/CMakeFiles/__idf_CalEPD.dir/build
-.PHONY : __idf_CalEPD/fast
+__idf_Edriver2/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build.make esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build
+.PHONY : __idf_Edriver2/fast
 
 #=============================================================================
 # Target rules for targets named __idf_FT6X36-IDF
@@ -1762,7 +1762,7 @@ help:
 	@echo "... uf2"
 	@echo "... uf2-app"
 	@echo "... __idf_Adafruit-GFX"
-	@echo "... __idf_CalEPD"
+	@echo "... __idf_Edriver2"
 	@echo "... __idf_FT6X36-IDF"
 	@echo "... __idf_I2Cbus"
 	@echo "... __idf_MPUdriver"

@@ -58,10 +58,6 @@ stddef.h
 stdint.h
 -
 
-/Users/naveenvivek/esp/esp-idf/components/esp_rom/include/esp32/rom/crc.h
-stdint.h
--
-
 /Users/naveenvivek/esp/esp-idf/components/esp_rom/include/esp_rom_sys.h
 sdkconfig.h
 /Users/naveenvivek/esp/esp-idf/components/esp_rom/include/sdkconfig.h
@@ -227,12 +223,6 @@ string.h
 -
 stddef.h
 -
-
-/Users/naveenvivek/esp/esp-idf/components/wear_levelling/crc32.cpp
-crc32.h
-/Users/naveenvivek/esp/esp-idf/components/wear_levelling/crc32.h
-esp32/rom/crc.h
-/Users/naveenvivek/esp/esp-idf/components/wear_levelling/esp32/rom/crc.h
 
 /Users/naveenvivek/esp/esp-idf/components/wear_levelling/crc32.h
 

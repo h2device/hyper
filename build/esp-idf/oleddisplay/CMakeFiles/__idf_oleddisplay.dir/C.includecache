@@ -562,12 +562,6 @@ OLEDDisplay.h
 driver/i2c.h
 /Users/naveenvivek/esp/esp-idf/components/oleddisplay/driver/i2c.h
 
-/Users/naveenvivek/esp/esp-idf/components/oleddisplay/OLEDDisplayFonts.c
-stdint.h
--
-sys/types.h
--
-
 /Users/naveenvivek/esp/esp-idf/components/oleddisplay/include/OLEDDisplay.h
 sys/types.h
 -
