@@ -128,12 +128,26 @@ esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.s"
 	cd /Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2 && /Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/epdpaint.cpp -o CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.s
 
+esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/flags.make
+esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj: /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naveenvivek/esp/hyper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj"
+	cd /Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2 && /Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj -c /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp
+
+esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.i"
+	cd /Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2 && /Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp > CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.i
+
+esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.s"
+	cd /Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2 && /Users/naveenvivek/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp -o CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.s
+
 # Object files for target __idf_Edriver2
 __idf_Edriver2_OBJECTS = \
 "CMakeFiles/__idf_Edriver2.dir/src/epdif.cpp.obj" \
 "CMakeFiles/__idf_Edriver2.dir/src/epd2in9_V2.cpp.obj" \
 "CMakeFiles/__idf_Edriver2.dir/src/imagedata.cpp.obj" \
-"CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.obj"
+"CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.obj" \
+"CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj"
 
 # External object files for target __idf_Edriver2
 __idf_Edriver2_EXTERNAL_OBJECTS =
@@ -142,9 +156,10 @@ esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/s
 esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epd2in9_V2.cpp.obj
 esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/imagedata.cpp.obj
 esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.obj
+esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj
 esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build.make
 esp-idf/Edriver2/libEdriver2.a: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/naveenvivek/esp/hyper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libEdriver2.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/naveenvivek/esp/hyper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libEdriver2.a"
 	cd /Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2 && $(CMAKE_COMMAND) -P CMakeFiles/__idf_Edriver2.dir/cmake_clean_target.cmake
 	cd /Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_Edriver2.dir/link.txt --verbose=$(VERBOSE)
 

@@ -30,18 +30,23 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 
-static const char* TAG = "example";
+// #include "epd2in9_V2.h"
+// #include "epdpaint.h"
+// #include "imagedata.h"
+// #include "fonts.h"
 
-#define DEFAULT_VREF    1100        //Use adc2_vref_to_gpio() to obtain a better estimate
-#define NO_OF_SAMPLES   64          //Multisampling
+static const char* TAG = "FINAL";
+
+#define DEFAULT_VREF  1100 //Use adc2_vref_to_gpio() to obtain a better estimate
+#define NO_OF_SAMPLES 64
 
 static adc_atten_t atten = ADC_ATTEN_11db;
-static adc_unit_t unit = ADC_UNIT_1;
+// static adc_unit_t unit = ADC_UNIT_1;
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static adc_bits_width_t width = ADC_WIDTH_BIT_12;
-static adc1_channel_t channel_f = ADC1_CHANNEL_6; // GPIO_NUM_34
-static adc1_channel_t channel_b = ADC1_CHANNEL_7; // GPIO_NUM_35
+static adc1_channel_t channel_f = ADC1_CHANNEL_3; // GPIO_NUM_39 - SENSOR_VN
+static adc1_channel_t channel_b = ADC1_CHANNEL_0; // GPIO_NUM_36 - SENSOR_VP
 
 static constexpr gpio_num_t SDA = GPIO_NUM_22;
 static constexpr gpio_num_t SCL = GPIO_NUM_23;
@@ -66,6 +71,7 @@ static float voltage_to_battery_percentage(int voltage) {
     float battery_voltage = voltage * 2.0 / 1000;
     float percentage_left = 100 - ((battery_voltage - 4.2) * 100 / -1.2);
     if (percentage_left > 99) percentage_left = 99;
+    if (percentage_left < 1) percentage_left = 1;
     return percentage_left;
 }
 
@@ -75,7 +81,19 @@ static float voltage_to_mass_value(int voltage) {
 }
 
 extern "C" void app_main() {
-
+    // Initialize display
+    /*
+    unsigned char image[1024];
+    Paint paint(image, 0, 0);    // width should be the multiple of 8 
+    paint.SetRotate(ROTATE_0);
+    Epd epd;
+    vTaskDelay(2000 / portTICK_PERIOD_MS);
+    printf("epd.Init() started.\n");
+  if (epd.Init() != 0) {
+    printf("e-Paper init failed\n");
+    return;
+  }
+    */
     check_efuse(); 
     adc1_config_width(width);
     adc1_config_channel_atten(channel_f, atten);
@@ -92,13 +110,19 @@ extern "C" void app_main() {
     MPU.setBus(i2c0); 
     MPU.setAddr(mpud::MPU_I2CADDRESS_AD0_LOW);
 
+    // Initial Bottle Mass
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    uint32_t adc_reading_f_initial = adc1_get_raw((adc1_channel_t)channel_f);
+    uint32_t voltage_f_initial = esp_adc_cal_raw_to_voltage(adc_reading_f_initial, adc_chars);
+    float bottle_mass = voltage_to_mass_value(voltage_f_initial);
+    printf("Bottle mass: %7.2f\n", bottle_mass);
+
+    // Initializing MPU
     while (esp_err_t err = MPU.testConnection()) {
         ESP_LOGE(TAG, "Failed to connect to the MPU, error=%#X", err);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
     ESP_LOGI(TAG, "MPU connection successful!");
-
-    // Initialize
     ESP_ERROR_CHECK(MPU.initialize());
 
     // Reading sensor data
@@ -124,10 +148,8 @@ extern "C" void app_main() {
         uint32_t adc_reading_f = 0;
         //Multisampling
         for (int i = 0; i < NO_OF_SAMPLES; i++) {
-            if (unit == ADC_UNIT_1) {
-                adc_reading_b += adc1_get_raw((adc1_channel_t)channel_b);
-                adc_reading_f += adc1_get_raw((adc1_channel_t)channel_f);
-            }
+            adc_reading_b += adc1_get_raw((adc1_channel_t)channel_b);
+            adc_reading_f += adc1_get_raw((adc1_channel_t)channel_f);
         }
 
         adc_reading_b /= NO_OF_SAMPLES;
@@ -143,8 +165,8 @@ extern "C" void app_main() {
         printf("Battery %% left: %2.2f %%\n\n", percentage_left);
 
         printf("F Raw: %d\tVoltage: %dmV\n", adc_reading_f, voltage_f);
-        printf("Volume in water bottle: %7.2f\n\n", force / (accelG.y / 9.81));
+        printf("Volume in water bottle: %7.2f\n\n", water_mass / (accelG.y / 9.81));
 
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }

@@ -62,6 +62,10 @@ esp_log.h
 epdpaint.h
 /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/epdpaint.h
 
+/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp
+fonts.h
+/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.h
+
 /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/imagedata.cpp
 imagedata.h
 /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/imagedata.h

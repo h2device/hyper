@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/epd2in9_V2.cpp" "/Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epd2in9_V2.cpp.obj"
   "/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/epdif.cpp" "/Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epdif.cpp.obj"
   "/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/epdpaint.cpp" "/Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.obj"
+  "/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp" "/Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj"
   "/Users/naveenvivek/esp/esp-idf/components/Edriver2/src/imagedata.cpp" "/Users/naveenvivek/esp/hyper/build/esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/imagedata.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

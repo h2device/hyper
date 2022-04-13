@@ -156,6 +156,9 @@ esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.obj
  /Users/naveenvivek/esp/esp-idf/components/Edriver2/include/epdpaint.h
  /Users/naveenvivek/esp/esp-idf/components/Edriver2/include/fonts.h
  /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/epdpaint.cpp
+esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj
+ /Users/naveenvivek/esp/esp-idf/components/Edriver2/include/fonts.h
+ /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/fonts.cpp
 esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/imagedata.cpp.obj
  /Users/naveenvivek/esp/esp-idf/components/Edriver2/include/imagedata.h
  /Users/naveenvivek/esp/esp-idf/components/Edriver2/src/imagedata.cpp

@@ -271,6 +271,33 @@ src/epdpaint.cpp.s:
 	cd /Users/naveenvivek/esp/hyper/build && $(MAKE) $(MAKESILENT) -f esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build.make esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/epdpaint.cpp.s
 .PHONY : src/epdpaint.cpp.s
 
+src/fonts.obj: src/fonts.cpp.obj
+
+.PHONY : src/fonts.obj
+
+# target to build an object file
+src/fonts.cpp.obj:
+	cd /Users/naveenvivek/esp/hyper/build && $(MAKE) $(MAKESILENT) -f esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build.make esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.obj
+.PHONY : src/fonts.cpp.obj
+
+src/fonts.i: src/fonts.cpp.i
+
+.PHONY : src/fonts.i
+
+# target to preprocess a source file
+src/fonts.cpp.i:
+	cd /Users/naveenvivek/esp/hyper/build && $(MAKE) $(MAKESILENT) -f esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build.make esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.i
+.PHONY : src/fonts.cpp.i
+
+src/fonts.s: src/fonts.cpp.s
+
+.PHONY : src/fonts.s
+
+# target to generate assembly for a file
+src/fonts.cpp.s:
+	cd /Users/naveenvivek/esp/hyper/build && $(MAKE) $(MAKESILENT) -f esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/build.make esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/src/fonts.cpp.s
+.PHONY : src/fonts.cpp.s
+
 src/imagedata.obj: src/imagedata.cpp.obj
 
 .PHONY : src/imagedata.obj
@@ -320,6 +347,9 @@ help:
 	@echo "... src/epdpaint.obj"
 	@echo "... src/epdpaint.i"
 	@echo "... src/epdpaint.s"
+	@echo "... src/fonts.obj"
+	@echo "... src/fonts.i"
+	@echo "... src/fonts.s"
 	@echo "... src/imagedata.obj"
 	@echo "... src/imagedata.i"
 	@echo "... src/imagedata.s"
