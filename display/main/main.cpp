@@ -10,8 +10,8 @@
 
 #include "epd2in9_V2.h"
 #include "epdpaint.h"
-#include "imagedata.h"
-#include "fonts.h"
+// #include "imagedata.h"
+// #include "fonts.h"
 
 #define COLORED     0
 #define UNCOLORED   1
@@ -22,7 +22,7 @@ extern "C" void app_main() {
   Paint paint(image, 0, 0);    // width should be the multiple of 8 
   paint.SetRotate(ROTATE_0);
   Epd epd;
-  // vTaskDelay(2000 / portTICK_PERIOD_MS);
+  vTaskDelay(2000 / portTICK_PERIOD_MS);
   printf("epd.Init() started.\n");
   if (epd.Init() != 0) {
     printf("e-Paper init failed\n");
@@ -35,27 +35,27 @@ extern "C" void app_main() {
   epd.DisplayFrame();
   printf("epd.DisplayFrame completed.\n");
   // WORKS TILL HERE
-  // paint.SetRotate(ROTATE_0);
-  /*paint.SetWidth(64);
+  paint.SetRotate(ROTATE_0);
+  /*
+  paint.SetWidth(64);
   paint.SetHeight(64);
   paint.SetRotate(ROTATE_0);
   paint.Clear(UNCOLORED);
 
   paint.DrawStringAt(100, 50, "test", &std_font, COLORED);
   epd.SetFrameMemory(paint.GetImage(), 100, 50, paint.GetWidth(), paint.GetHeight());
-
-  epd.DisplayFrame(); */
-
+  epd.DisplayFrame(); 
+  */
+ 
   paint.SetWidth(32);
   paint.SetHeight(96);
   paint.SetRotate(ROTATE_90);
   paint.Clear(COLORED);
   paint.Clear(UNCOLORED);
-  paint.DrawStringAt(0, 4, "20%", &std_font, COLORED);
-  epd.SetFrameMemory_Partial(paint.GetImage(), 80, 72, paint.GetWidth(), paint.GetHeight());
-  epd.DisplayFrame_Partial();
-  printf("displayed\n");
-
+  paint.DrawStringAt(0, 4, "80%", &std_font, COLORED);
+  epd.SetFrameMemory(paint.GetImage(), 80, 72, paint.GetWidth(), paint.GetHeight());
+  epd.DisplayFrame();
+  
 
   /*paint.DrawFilledRectangle(0, 0, 40, 50, COLORED);
   epd.SetFrameMemory(paint.GetImage(), 8, 130, paint.GetWidth(), paint.GetHeight());
@@ -84,5 +84,6 @@ extern "C" void app_main() {
   }
   printf("Done!\n");
   */
+  printf("displayed, exiting app_main\n");
   return;
 }
