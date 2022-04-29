@@ -2118,14 +2118,14 @@ CMakeFiles/size-components.dir/clean:
 # Target rules for target CMakeFiles/hyper.elf.dir
 
 # All Build rule for target.
-CMakeFiles/hyper.elf.dir/all: esp-idf/Adafruit-GFX/CMakeFiles/__idf_Adafruit-GFX.dir/all
-CMakeFiles/hyper.elf.dir/all: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/all
+CMakeFiles/hyper.elf.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
+CMakeFiles/hyper.elf.dir/all: esp-idf/oleddisplay/CMakeFiles/__idf_oleddisplay.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-CMakeFiles/hyper.elf.dir/all: CMakeFiles/_project_elf_src.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
-CMakeFiles/hyper.elf.dir/all: esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all
+CMakeFiles/hyper.elf.dir/all: esp-idf/Adafruit-GFX/CMakeFiles/__idf_Adafruit-GFX.dir/all
+CMakeFiles/hyper.elf.dir/all: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/FT6X36-IDF/CMakeFiles/__idf_FT6X36-IDF.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/I2Cbus/CMakeFiles/__idf_I2Cbus.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/MPUdriver/CMakeFiles/__idf_MPUdriver.dir/all
@@ -2146,13 +2146,13 @@ CMakeFiles/hyper.elf.dir/all: esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_
 CMakeFiles/hyper.elf.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
-CMakeFiles/hyper.elf.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
-CMakeFiles/hyper.elf.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
-CMakeFiles/hyper.elf.dir/all: esp-idf/oleddisplay/CMakeFiles/__idf_oleddisplay.dir/all
 CMakeFiles/hyper.elf.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
+CMakeFiles/hyper.elf.dir/all: CMakeFiles/_project_elf_src.dir/all
+CMakeFiles/hyper.elf.dir/all: esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all
+CMakeFiles/hyper.elf.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hyper.elf.dir/build.make CMakeFiles/hyper.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hyper.elf.dir/build.make CMakeFiles/hyper.elf.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/naveenvivek/esp/hyper/build/CMakeFiles --progress-num= "Built target hyper.elf"
@@ -3588,12 +3588,14 @@ esp-idf/esp_system/CMakeFiles/memory_ld.dir/clean:
 # Target rules for target esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir
 
 # All Build rule for target.
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/Adafruit-GFX/CMakeFiles/__idf_Adafruit-GFX.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/oleddisplay/CMakeFiles/__idf_oleddisplay.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/Adafruit-GFX/CMakeFiles/__idf_Adafruit-GFX.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/Edriver2/CMakeFiles/__idf_Edriver2.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/FT6X36-IDF/CMakeFiles/__idf_FT6X36-IDF.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/I2Cbus/CMakeFiles/__idf_I2Cbus.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/MPUdriver/CMakeFiles/__idf_MPUdriver.dir/all
@@ -3614,13 +3616,11 @@ esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_lo
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/fonts/CMakeFiles/__idf_fonts.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/oleddisplay/CMakeFiles/__idf_oleddisplay.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/naveenvivek/esp/hyper/build/CMakeFiles --progress-num= "Built target __ldgen_output_sections.ld"

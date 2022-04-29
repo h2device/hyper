@@ -2016,38 +2016,7 @@
             {
                 "children": [
                     {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": "<choice>",
-                                "help": null,
-                                "id": "I2CBUS_LOG_RW_LEVEL_INFO",
-                                "name": "I2CBUS_LOG_RW_LEVEL_INFO",
-                                "range": null,
-                                "title": "Info",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice>",
-                                "help": null,
-                                "id": "I2CBUS_LOG_RW_LEVEL_DEBUG",
-                                "name": "I2CBUS_LOG_RW_LEVEL_DEBUG",
-                                "range": null,
-                                "title": "Debug",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice>",
-                                "help": null,
-                                "id": "I2CBUS_LOG_RW_LEVEL_VERBOSE",
-                                "name": "I2CBUS_LOG_RW_LEVEL_VERBOSE",
-                                "range": null,
-                                "title": "Verbose",
-                                "type": "bool"
-                            }
-                        ],
+                        "children": [],
                         "depends_on": "I2CBUS_LOG_READWRITES",
                         "help": "Log level for successuful read/write operations. Levels depends on LOG_DEFAULT_LEVEL.",
                         "id": "i2cbus-log-successuful-read-write-operations-debug--log-level",
